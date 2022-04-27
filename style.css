@@ -41,6 +41,7 @@ main {
 
 .mainText p {
     font-family: 'Inter';
+    font-weight: 400;
     line-height: 1.75rem;
     color: hsla(0, 0%, 100%, 0.75)
 }
@@ -58,6 +59,7 @@ main {
 .statContainer div {
     display: flex;
     flex-direction: column;
+    margin-right: 15px;
 }
 
 .statContainer h2 {
@@ -70,7 +72,8 @@ main {
 .statContainer p {
     font-family: 'Lexend Deca';
     color: hsl(0, 0%, 100%, 0.6);
-    font-size: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
 .imageContainer {
@@ -86,6 +89,45 @@ main {
     opacity: 0.5;
 }
 
+#mobileImage {
+    width: inherit;
+    height: inherit;
+    background-size:auto;
+    opacity: 0.5;
+}
+
 @media only screen and (max-width: 900px) {
-    
+    main {
+        flex-direction: column;
+        width: 325px;
+        height: auto;
+        text-align: center;
+    }
+
+    .imageContainer {
+        order: -1;
+        height: 240px;
+        width: inherit;
+    }
+
+    #desktopImage {
+        display: none;
+    }
+
+    .mainText {
+        width: inherit;
+        padding: 2rem 1.8rem;
+    }
+    .statContainer {
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .statContainer div {
+        margin-top: 0.75rem;
+    }
+
+    .mainText > p {
+        margin: 1rem 0;
+    }
 }
